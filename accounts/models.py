@@ -33,7 +33,6 @@ class Account(AbstractBaseUser):
     email         = models.EmailField(max_length=255, unique=True)
     nickname      = models.CharField(max_length=50, unique=True)
     date_of_join  = models.DateField(auto_now_add=True)
-    is_active     = models.BooleanField(default=True)
     is_admin      = models.BooleanField(default=False)
 
     objects = UserManager()
